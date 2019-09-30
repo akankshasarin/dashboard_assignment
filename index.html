@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./dist/dashboard.bundle.css" />
+  </head>
+
+  <body>
+    <nav class="nav">
+      <div class="nav__group">
+        <div class="nav__item">
+          <a href="javascript:void(0)" class="nav__link ico" title="Search">
+            <svg role="icon">
+              <use xlink:href="#icon-search"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="nav__item is-active">
+          <a href="javascript:void(0)" class="nav__link ico" title="Project">
+            <svg role="icon">
+              <use xlink:href="#icon-project"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="nav__item">
+          <a href="javascript:void(0)" class="nav__link ico" title="People">
+            <svg role="icon">
+              <use xlink:href="#icon-users"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="nav__item">
+          <a href="javascript:void(0)" class="nav__link ico" title="Comments">
+            <svg role="icon">
+              <use xlink:href="#icon-comment"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="nav__item">
+          <a href="javascript:void(0)" class="nav__link ico" title="Directions">
+            <svg role="icon">
+              <use xlink:href="#icon-directions"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="nav__item">
+          <a href="javascript:void(0)" class="nav__link ico" title="Extension">
+            <svg role="icon">
+              <use xlink:href="#icon-extension"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="nav__item">
+          <a href="javascript:void(0)" class="nav__link ico" title="Settings">
+            <svg role="icon">
+              <use xlink:href="#icon-settings"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="nav__group">
+        <div class="nav__item">
+          <a
+            href="javascript:void(0)"
+            class="nav__link ico"
+            title="Notifications"
+          >
+            <svg role="icon">
+              <use xlink:href="#icon-notifications"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="nav__item">
+          <a href="javascript:void(0)" class="nav__link ico" title="Help">
+            <svg role="icon">
+              <use xlink:href="#icon-help"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="sidebar">
+      <div class="sidebar__control js-toggle-sidebar">
+        <div class="sidebar__icon ico">
+          <svg>
+            <use xlink:href="#icon-caret-left"></use>
+          </svg>
+        </div>
+      </div>
+      <div class="sidebar__header">
+        <div class="brand">
+          <div class="brand__name">ABC</div>
+          <div class="brand__type">Bank</div>
+        </div>
+        <div class="sidebar__title">All Survey</div>
+      </div>
+      <div class="sidebar__body sidenav">
+        <div class="sidenav__item">
+          <div class="sidenav__link is-active">
+            <div class="sidenav__icon ico">
+              <svg>
+                <use xlink:href="#icon-project"></use>
+              </svg>
+            </div>
+            <div class="sidenav__label">My Project</div>
+          </div>
+        </div>
+        <div class="sidenav__item">
+          <div class="sidenav__link">
+            <div class="sidenav__icon ico">
+              <svg>
+                <use xlink:href="#icon-archive"></use>
+              </svg>
+            </div>
+            <div class="sidenav__label">Archived</div>
+          </div>
+        </div>
+        <div class="sidenav__item">
+          <div class="sidenav__link">
+            <div class="sidenav__icon ico">
+              <svg>
+                <use xlink:href="#icon-folder"></use>
+              </svg>
+            </div>
+            <div class="sidenav__label">Folder</div>
+          </div>
+        </div>
+        <div class="sidenav__item">
+          <div class="sidenav__link">
+            <div class="sidenav__icon ico">
+              <svg>
+                <use xlink:href="#icon-delete"></use>
+              </svg>
+            </div>
+            <div class="sidenav__label">Trash</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main class="main">
+      <header class="header">
+        <div class="header__section header__section--left">
+          <div class="header__control ico">
+            <svg>
+              <use xlink:href="#icon-maximize"></use>
+            </svg>
+          </div>
+          <div class="header__title">My Projects</div>
+        </div>
+        <div class="header__section header__section--right">
+          <div class="header__search search">
+            <div class="search__field">
+              <input
+                type="text"
+                class="search__input"
+                placeholder="Search..."
+              />
+              <span class="search__icon ico">
+                <svg>
+                  <use xlink:href="#icon-search"></use>
+                </svg>
+              </span>
+            </div>
+          </div>
+          <div class="header__filter">
+            <div class="filter ico">
+              <svg>
+                <use xlink:href="#icon-filter"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="header__action">
+            <button class="header__button">Create Project</button>
+          </div>
+        </div>
+      </header>
+      <div class="content">
+        <div class="accordion">
+          <input
+            type="checkbox"
+            name="accordion"
+            id="trending_projects"
+            class="accordion__checkbox"
+            checked
+          />
+          <label for="trending_projects" class="accordion__header">
+            <span class="accordion__title">Trending Projects</span>
+            <span class="accordion__icon ico">
+              <svg>
+                <use xlink:href="#icon-caret-down"></use>
+              </svg>
+            </span>
+          </label>
+          <div class="accordion__body">
+            <div class="project project--blue">
+              <div class="project__options"></div>
+              <div class="project__body">
+                <div class="project__media">P</div>
+                <div class="project__info">
+                  <div class="project__title">Project Name</div>
+                  <div class="project__desc">Employee Experience</div>
+                </div>
+              </div>
+              <div class="project__footer">
+                <div class="project__responses">245 responses</div>
+                <div class="project__actions">
+                  <div class="project__btn ico">
+                    <svg>
+                      <use xlink:href="#icon-assignment"></use>
+                    </svg>
+                  </div>
+                  <div class="project__btn ico">
+                    <svg>
+                      <use xlink:href="#icon-share"></use>
+                    </svg>
+                  </div>
+                  <div class="project__btn ico">
+                    <svg>
+                      <use xlink:href="#icon-directions"></use>
+                    </svg>
+                  </div>
+                  <div class="project__btn ico">
+                    <svg>
+                      <use xlink:href="#icon-assessment"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project project--purple">
+              <div class="project__options"></div>
+              <div class="project__body">
+                <div class="project__media">P</div>
+                <div class="project__info">
+                  <div class="project__title">Project Name</div>
+                  <div class="project__desc">Employee Experience</div>
+                </div>
+              </div>
+              <div class="project__footer">
+                <div class="project__responses">245 responses</div>
+                <div class="project__actions">
+                  <div class="project__btn ico">
+                    <svg>
+                      <use xlink:href="#icon-assignment"></use>
+                    </svg>
+                  </div>
+                  <div class="project__btn ico">
+                    <svg>
+                      <use xlink:href="#icon-share"></use>
+                    </svg>
+                  </div>
+                  <div class="project__btn ico">
+                    <svg>
+                      <use xlink:href="#icon-directions"></use>
+                    </svg>
+                  </div>
+                  <div class="project__btn ico">
+                    <svg>
+                      <use xlink:href="#icon-assessment"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project project--green">
+              <div class="project__options"></div>
+              <div class="project__body">
+                <div class="project__media">P</div>
+                <div class="project__info">
+                  <div class="project__title">Project Name</div>
+                  <div class="project__desc">Employee Experience</div>
+                </div>
+              </div>
+              <div class="project__footer">
+                <div class="project__responses">245 responses</div>
+                <div class="project__actions">
+                  <div class="project__btn ico">
+                    <svg>
+                      <use xlink:href="#icon-assignment"></use>
+                    </svg>
+                  </div>
+                  <div class="project__btn ico">
+                    <svg>
+                      <use xlink:href="#icon-share"></use>
+                    </svg>
+                  </div>
+                  <div class="project__btn ico">
+                    <svg>
+                      <use xlink:href="#icon-directions"></use>
+                    </svg>
+                  </div>
+                  <div class="project__btn ico">
+                    <svg>
+                      <use xlink:href="#icon-assessment"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project project--orange">
+              <div class="project__options"></div>
+              <div class="project__body">
+                <div class="project__media">P</div>
+                <div class="project__info">
+                  <div class="project__title">Project Name</div>
+                  <div class="project__desc">Employee Experience</div>
+                </div>
+              </div>
+              <div class="project__footer">
+                <div class="project__responses">245 responses</div>
+                <div class="project__actions">
+                  <div class="project__btn ico">
+                    <svg>
+                      <use xlink:href="#icon-assignment"></use>
+                    </svg>
+                  </div>
+                  <div class="project__btn ico">
+                    <svg>
+                      <use xlink:href="#icon-share"></use>
+                    </svg>
+                  </div>
+                  <div class="project__btn ico">
+                    <svg>
+                      <use xlink:href="#icon-directions"></use>
+                    </svg>
+                  </div>
+                  <div class="project__btn ico">
+                    <svg>
+                      <use xlink:href="#icon-assessment"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion">
+          <input
+            type="checkbox"
+            name="accordion"
+            id="recently_created_projects"
+            class="accordion__checkbox"
+            checked
+          />
+          <label for="recently_created_projects" class="accordion__header">
+            <span class="accordion__title">Recently Created Projects</span>
+            <span class="accordion__icon ico">
+              <svg>
+                <use xlink:href="#icon-caret-down"></use>
+              </svg>
+            </span>
+          </label>
+          <div class="accordion__body">
+            <div class="project project--teal">
+              <div class="project__options"></div>
+              <div class="project__body">
+                <div class="project__media">P</div>
+                <div class="project__info">
+                  <div class="project__title">Project Name</div>
+                  <div class="project__desc">Employee Experience</div>
+                </div>
+              </div>
+              <div class="project__footer">
+                <div class="project__responses">245 responses</div>
+                <div class="project__actions">
+                  <div class="project__btn ico">
+                    <svg>
+                      <use xlink:href="#icon-assignment"></use>
+                    </svg>
+                  </div>
+                  <div class="project__btn ico">
+                    <svg>
+                      <use xlink:href="#icon-share"></use>
+                    </svg>
+                  </div>
+                  <div class="project__btn ico">
+                    <svg>
+                      <use xlink:href="#icon-directions"></use>
+                    </svg>
+                  </div>
+                  <div class="project__btn ico">
+                    <svg>
+                      <use xlink:href="#icon-assessment"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project project--yellow">
+              <div class="project__options"></div>
+              <div class="project__body">
+                <div class="project__media">P</div>
+                <div class="project__info">
+                  <div class="project__title">Project Name</div>
+                  <div class="project__desc">Employee Experience</div>
+                </div>
+              </div>
+              <div class="project__footer">
+                <div class="project__responses">245 responses</div>
+                <div class="project__actions">
+                  <div class="project__btn ico">
+                    <svg>
+                      <use xlink:href="#icon-assignment"></use>
+                    </svg>
+                  </div>
+                  <div class="project__btn ico">
+                    <svg>
+                      <use xlink:href="#icon-share"></use>
+                    </svg>
+                  </div>
+                  <div class="project__btn ico">
+                    <svg>
+                      <use xlink:href="#icon-directions"></use>
+                    </svg>
+                  </div>
+                  <div class="project__btn ico">
+                    <svg>
+                      <use xlink:href="#icon-assessment"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project project--gray">
+              <div class="project__options"></div>
+              <div class="project__body">
+                <div class="project__media">P</div>
+                <div class="project__info">
+                  <div class="project__title">Project Name</div>
+                  <div class="project__desc">Employee Experience</div>
+                </div>
+              </div>
+              <div class="project__footer">
+                <div class="project__responses">245 responses</div>
+                <div class="project__actions">
+                  <div class="project__btn ico">
+                    <svg>
+                      <use xlink:href="#icon-assignment"></use>
+                    </svg>
+                  </div>
+                  <div class="project__btn ico">
+                    <svg>
+                      <use xlink:href="#icon-share"></use>
+                    </svg>
+                  </div>
+                  <div class="project__btn ico">
+                    <svg>
+                      <use xlink:href="#icon-directions"></use>
+                    </svg>
+                  </div>
+                  <div class="project__btn ico">
+                    <svg>
+                      <use xlink:href="#icon-assessment"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project project--blue">
+              <div class="project__options"></div>
+              <div class="project__body">
+                <div class="project__media">P</div>
+                <div class="project__info">
+                  <div class="project__title">Project Name</div>
+                  <div class="project__desc">Employee Experience</div>
+                </div>
+              </div>
+              <div class="project__footer">
+                <div class="project__responses">245 responses</div>
+                <div class="project__actions">
+                  <div class="project__btn ico">
+                    <svg>
+                      <use xlink:href="#icon-assignment"></use>
+                    </svg>
+                  </div>
+                  <div class="project__btn ico">
+                    <svg>
+                      <use xlink:href="#icon-share"></use>
+                    </svg>
+                  </div>
+                  <div class="project__btn ico">
+                    <svg>
+                      <use xlink:href="#icon-directions"></use>
+                    </svg>
+                  </div>
+                  <div class="project__btn ico">
+                    <svg>
+                      <use xlink:href="#icon-assessment"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./dist/dashboard.bundle.js"></script>
+  </body>
+</html>

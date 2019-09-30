@@ -1,0 +1,38 @@
+//================================================
+// Accordion
+// Author: Akanksha Sarin
+//================================================
+
+.accordion {
+  position: relative;
+  font-size: $fz-base;
+  &__header,
+  &__body {
+    display: block;
+    padding: 1rem 2rem;
+  }
+
+  &__title,
+  &__icon {
+    font-size: $fz-lg;
+  }
+
+  &__icon {
+    line-height: 1;
+  }
+
+  &__body {
+    display: none;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+    transform-origin: top center;
+  }
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__checkbox:checked ~ &__body {
+    display: grid;
+  }
+}

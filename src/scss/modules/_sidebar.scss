@@ -1,0 +1,93 @@
+//================================================
+// Navigation | Side Navigation Collapsible
+// Author: Akanksha Sarin
+//================================================
+
+.sidebar {
+  position: relative;
+  float: left;
+  width: 200px;
+  height: 100vh;
+  border-right: 1px solid $border-color;
+  transition: transform $transition-base;
+  background-color: $bg-color;
+  z-index: 1;
+
+  &__header {
+    padding: 2rem 2rem 1rem 2rem;
+  }
+
+  &__title {
+    padding-bottom: 1rem;
+    font-size: $fz-lg;
+    border-bottom: 1px solid $border-color;
+  }
+
+  &__body {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  &__control {
+    position: absolute;
+    top: 2.5rem;
+    right: -1.2rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    border: 1px solid $border-color;
+    background-color: $bg-color;
+    text-align: center;
+    line-height: 1.5;
+    color: $brand-primary;
+    cursor: pointer;
+    transition: all $transition-base;
+
+    .collapsed & {
+      transform: rotate(180deg);
+      color: $white;
+      background-color: $brand-primary;
+    }
+  }
+
+  &.collapsed {
+    transform: translateX(-90%);
+  }
+}
+
+.sidenav {
+  position: relative;
+
+  &__item {
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+  }
+
+  &__link {
+    padding: 0 1rem;
+    border-radius: 0.4rem;
+    line-height: 4rem;
+    cursor: pointer;
+    transition: background-color $transition-base, color $transition-base;
+
+    &:hover,
+    &.is-active {
+      background-color: $highlight-color;
+      color: $brand-primary;
+    }
+  }
+
+  &__icon,
+  &__label {
+    display: inline-block;
+  }
+
+  &__icon {
+    font-size: $fz-xl;
+  }
+
+  &__label {
+    padding-left: 1rem;
+    font-size: $fz-base;
+  }
+}

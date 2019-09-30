@@ -1,0 +1,94 @@
+//================================================
+// Header
+// Author: Akanksha Sarin
+//================================================
+
+.header {
+  position: relative;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: justify;
+
+  &__section {
+    display: inline-grid;
+    grid-gap: 1.2rem;
+    
+    &--left {
+      justify-content: start;
+      grid-template-columns: 3.2rem auto;
+    }
+
+    &--right {
+      justify-content: end;
+      grid-template-columns: auto 3.2rem auto;
+    }
+  }
+
+  &__control {
+    text-align: center;
+    border-right: 1px solid $text-dark;
+    line-height: 1.5;
+    cursor: pointer;
+
+    & > svg {
+      transform: scaleX(-1);
+    }
+  }
+
+  &__title {
+    font-size: $fz-xl;
+  }
+
+  &__button {
+    appearance: none;
+    border: none;
+    outline: none;
+    background-color: $brand-primary;
+    color: $white;
+    border-radius: 0.4rem;
+    padding: 0.8rem 1rem;
+    cursor: pointer;
+    transition: background-color $transition-base;
+
+    &:hover {
+      background-color: $nav-bg;
+    }
+  }
+}
+
+.search {
+  position: relative;
+
+  &__field {
+    border: 1px solid $border-color;
+    border-radius: 0.4rem;
+  }
+
+  &__input {
+    padding: 0.8rem 1rem;
+    border: none;
+    outline: none;
+    background-color: transparent;
+  }
+
+  &__icon {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    color: $brand-primary;
+    cursor: pointer;
+  }
+}
+
+.filter {
+  width: 3.2rem;
+  height: 3.2rem;
+  line-height: 2.4;
+  background-color: $highlight-color;
+  border-radius: 0.4rem;
+  cursor: pointer;
+
+  &:hover {
+    color: $brand-primary;
+  }
+}

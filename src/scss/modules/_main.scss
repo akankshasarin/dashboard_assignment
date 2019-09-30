@@ -1,0 +1,26 @@
+//================================================
+// Main
+// Author: Akanksha Sarin
+//================================================
+
+.main {
+  position: relative;
+  float: left;
+  width: calc(100% - 6.4rem);
+  height: 100vh;
+  margin-left: -20rem;
+  padding-left: 20rem;
+  background-color: $bg-color;
+  transition: all $transition-base;
+  max-height: 7.2rem;
+  .collapsed ~ & {
+    padding-left: 2rem;
+  }
+}
+
+.content {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  height: calc(100vh - 7.2rem);
+  overflow: auto;
+}

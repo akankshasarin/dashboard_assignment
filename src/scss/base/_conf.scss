@@ -1,0 +1,45 @@
+//================================================
+// Configuration
+// Author: Akanksha Sarin
+//================================================
+
+html {
+  font-family: $font-family-primary;
+  font-size: 10px;
+  color: $text-dark;
+  background-color: $bg-color;
+}
+body {
+  height: 100vh;
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.svgContent {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.ico {
+  display: inline-block;
+  text-align: center;
+  vertical-align: baseline;
+
+  & > svg {
+    display: inline-block;
+    height: 1em;
+    width: 1em;
+    font-size: inherit;
+    vertical-align: baseline;
+    color: inherit;
+    fill: currentColor;
+    vertical-align: middle;
+  }
+}

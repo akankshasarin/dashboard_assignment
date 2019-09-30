@@ -1,0 +1,178 @@
+//================================================
+// Project
+// Author: Akanksha Sarin
+//================================================
+
+.project {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  border: 1px solid $border-color;
+  border-radius: 0.4rem;
+
+  &__body,
+  &__footer {
+    padding: 2.6rem 2rem;
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: 4rem auto;
+    grid-gap: 1rem;
+    align-items: center;
+  }
+
+  &__options {
+    top: 1rem;
+    right: 1.5rem;
+    opacity: 0;
+    transition: opacity $transition-base;
+    cursor: pointer;
+
+    &,
+    &::before,
+    &::after {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 0.3rem;
+      height: 0.3rem;
+      background-color: #2e384d;
+      border-radius: 0.3rem;
+      z-index: 1;
+    }
+
+    &::before {
+      left: -0.5rem;
+    }
+    &::after {
+      right: -0.5rem;
+    }
+  }
+
+  &__media {
+    line-height: 4rem;
+    border-radius: 0.4rem;
+    text-align: center;
+    color: $white;
+  }
+
+  // &__info {}
+  &__title {
+    font-size: $fz-base;
+    font-weight: 500;
+    padding-bottom: 1rem;
+  }
+
+  &__desc {
+    font-size: $fz-sm;
+  }
+
+  &__footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #fff;
+  }
+
+  &__responses {
+    display: inline-grid;
+    align-content: center;
+  }
+
+  &__actions {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &__btn {
+    position: relative;
+    display: block;
+    width: 100%;
+    font-size: $fz-xl;
+
+    &::before {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 0.8rem;
+      height: 0.8rem;
+      background-color: $border-color;
+      z-index: inherit;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      opacity: 1;
+      transition: opacity $transition-base;
+      cursor: pointer;
+    }
+
+    & > svg {
+      opacity: 0;
+      transition: opacity $transition-base;
+    }
+
+    &:hover {
+      color: $brand-primary;
+    }
+  }
+
+  &:hover &__btn {
+    &::before {
+      opacity: 0;
+    }
+    & > svg {
+      opacity: 1;
+    }
+  }
+
+  &:hover &__options {
+    opacity: 1;
+  }
+}
+
+// Coloring
+// Background
+.project--blue .project__body {
+  background-color: $blue-light;
+}
+.project--purple .project__body {
+  background-color: $purple-light;
+}
+.project--green .project__body {
+  background-color: $green-light;
+}
+.project--orange .project__body {
+  background-color: $orange-light;
+}
+.project--teal .project__body {
+  background-color: $teal-light;
+}
+.project--yellow .project__body {
+  background-color: $yellow-light;
+}
+.project--gray .project__body {
+  background-color: $gray-light;
+}
+// Media
+.project--blue .project__media {
+  background-color: $blue;
+}
+.project--purple .project__media {
+  background-color: $purple;
+}
+.project--green .project__media {
+  background-color: $green;
+}
+.project--orange .project__media {
+  background-color: $orange;
+}
+.project--teal .project__media {
+  background-color: $teal;
+}
+.project--yellow .project__media {
+  background-color: $yellow;
+}
+.project--gray .project__media {
+  background-color: $gray;
+}
